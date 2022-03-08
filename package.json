@@ -16,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/GSG-G11/recipezShare/issues"
   },
-  "homepage": "https://github.com/GSG-G11/recipezShare#readme"
+  "homepage": "https://github.com/GSG-G11/recipezShare#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "env2": "^2.2.2",
+    "express": "^4.17.3",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.10.0",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
+  }
 }
