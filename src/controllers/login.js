@@ -6,7 +6,7 @@ const { getUser } = require('../database/queries');
 const logIn = (req, res) => {
   const { username, password } = req.body;
   logInValidation(req.body)
-    .then((data) => getUser(username))
+    .then(() => getUser(username))
     .then((response) => {
       if (response.rows.length === 0) {
         return res.json({ message: 'wrong user name or wrong password' });
@@ -18,7 +18,7 @@ const logIn = (req, res) => {
       if (result) {
         jwtSignPromise(username)
           .then((token) => res.cookie('info', token).json(token))
-          .catch((err) => res.json({ message: 'error' }));
+          .catch(() => res.json({ message: 'error' }));
       } else {
         res.json({ message: 'wrong user name or wrong password' });
       }
