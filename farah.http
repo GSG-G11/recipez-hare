@@ -1,0 +1,11 @@
+
+POST http:localhost:3000/sign-up
+content-type: application/json
+
+{
+    "username": "sample",
+    "password": "12345678",
+    "repeatPassword":"12345678"
+}
+
+
