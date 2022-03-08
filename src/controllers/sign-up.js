@@ -3,7 +3,6 @@ const { signUpValidation } = require('../validation');
 const { hashPassword } = require('../utils');
 
 const signUp = (req, res) => {
-  res.json({meaagse:"hello world"})
   const { username, password } = req.body;
   signUpValidation(req.body)
     .then(() => hasUsernameTakenQuery({ username }))

@@ -1,5 +1,5 @@
 const { hashPassword } = require('./hashPassword');
-const {comparepassword}= require('./comparepassword')
-const {jwtSginPromise}=require('./jwtSignPromise')
+const { comparepassword } = require('./comparepassword');
+const { jwtSignPromise } = require('./jwtSignPromise');
 
-module.exports = { hashPassword,jwtSginPromise };
+module.exports = { hashPassword, jwtSignPromise, comparepassword };
