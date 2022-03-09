@@ -17,7 +17,7 @@ const logIn = (req, res) => {
     .then((result) => {
       if (result) {
         jwtSignPromise(username)
-          .then((token) => res.cookie('info', token).json(token))
+          .then((token) => res.cookie('info', token).json('AUTH'))
           .catch(() => res.json({ message: 'error' }));
       } else {
         res.json({ message: 'wrong user name or wrong password' });

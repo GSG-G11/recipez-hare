@@ -1,0 +1,7 @@
+.container{
+    background-image: url('../hero-bg.jpg');
+    width: 99vw;
+    height: 100vh;
+    background-size: cover;
+    color: #fff;
+}
