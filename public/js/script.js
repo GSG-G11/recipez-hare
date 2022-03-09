@@ -7,11 +7,9 @@ const recipySection = document.querySelector('.createRecipy');
 const closeIcon = document.querySelector('#close');
 const addBtn = document.querySelector('#btn');
 
-console.log(getUserInfoFromCookie());
-
 const login = document.querySelector('#login');
 const reciepes = document.querySelector('#addReciepe');
-
+const userInfo = getUserInfoFromCookie();
 login?.addEventListener('submit', (e) => {
   e.preventDefault();
   const { username, password } = e.target;
@@ -25,8 +23,9 @@ login?.addEventListener('submit', (e) => {
 
 reciepes?.addEventListener('submit', (e) => {
   e.preventDefault();
-  const { title, detail, userId } = e.target;
-  postData({ title: title.value.trim(), detail: detail.value.trim(), userId: Number(userId.value.trim()) }, '/user/addReciepes');
+  const { title, detail } = e.target;
+
+  postData({ title: title.value.trim(), detail: detail.value.trim(), userId: userInfo.id }, '/user/addReciepes');
 });
 
 plusIcon.addEventListener('click', () => {

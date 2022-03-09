@@ -109,3 +109,35 @@
     opacity: 1;
     
 }
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 50vw;
+    border: 1px solid #d8d8d8;
+    margin-bottom: 30px;
+}
+.img {
+    width: 50vw;
+  }
+  .headerCard{
+    padding: 0 20px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .publicherInfo {
+    display: flex;
+  }
+  .publicherInfo img {
+    padding-top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }

@@ -1,11 +1,34 @@
-import postData from './postData.js';
+const cards = document.querySelector('.cards');
+const renderDom = ((obj) => {
+  const card = document.createElement('div');
 
-const signUp = document.querySelector('.signUp');
-signUp.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const username = e.target.username.value.trim();
-  const password = e.target.password.value.trim();
-  const repeatPassword = e.target.repeatPassword.value.trim();
-  console.log({ username, repeatPassword, password });
-  postData({ username, repeatPassword, password }, '/sign-up');
+  const headerCard = document.createElement('div');
+  headerCard.className = 'headerCard';
+  const publicherInfo = document.createElement('div');
+  publicherInfo.className = 'publicherInfo';
+  const userImage = document.createElement('img');
+  userImage.src = './assets/users.jpeg';
+  const title = document.createElement('p');
+  title.className = 'userName';
+  title.textContent = obj.title;
+  publicherInfo.appendChild(userImage);
+  publicherInfo.appendChild(title);
+  headerCard.append(publicherInfo);
+
+  const content = document.createElement('div');
+  content.className = 'contant';
+
+  const image = document.createElement('img');
+  image.className = 'img';
+  image.src = obj.image_url;
+
+  const div2 = document.createElement('div');
+  const caption = document.createElement('p');
+  caption.className = 'caption';
+  caption.textContent = obj.content;
+  content.append(image, div2);
+
+  div2.append(caption);
+  card.append(headerCard, content);
+  cards.append(card);
 });
