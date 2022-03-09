@@ -6,19 +6,30 @@ const plusIcon = document.querySelector('#plus');
 const recipySection = document.querySelector('.createRecipy');
 const closeIcon = document.querySelector('#close');
 const addBtn = document.querySelector('#btn');
-
 const login = document.querySelector('#login');
 const reciepes = document.querySelector('#addReciepe');
 const userInfo = getUserInfoFromCookie();
+
+fetch('/user/getRecipes')
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((object) => {
+      renderDom(object);
+    });
+  })
+  .catch((err) => console.log(err));
+
 login?.addEventListener('submit', (e) => {
   e.preventDefault();
   const { username, password } = e.target;
-  postData({ username: username.value.trim(), password: password.value.trim() }, '/log-in')
-    .then((res) => {
-      if (res === 'AUTH') {
-        window.location.href = '/user';
-      }
-    });
+  postData(
+    { username: username.value.trim(), password: password.value.trim() },
+    '/log-in',
+  ).then((res) => {
+    if (res === 'AUTH') {
+      window.location.href = '/user';
+    }
+  });
 });
 
 reciepes?.addEventListener('submit', (e) => {
