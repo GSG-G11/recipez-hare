@@ -2,7 +2,7 @@
 import postData from './postData.js';
 import getUserInfoFromCookie from './getUserInfoFromCookie.js';
 
-console.log(getUserInfoFromCookie());
+// console.log(getUserInfoFromCookie());
 
 const login = document.querySelector('#login');
 const reciepes = document.querySelector('#addReciepe');

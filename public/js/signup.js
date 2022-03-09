@@ -6,6 +6,10 @@ signUp.addEventListener('submit', (e) => {
   const username = e.target.username.value.trim();
   const password = e.target.password.value.trim();
   const repeatPassword = e.target.repeatPassword.value.trim();
-  console.log({ username, repeatPassword, password });
-  postData({ username, repeatPassword, password }, '/sign-up');
+  postData({ username, repeatPassword, password }, '/sign-up')
+    .then((res) => {
+      if (res === 'AUTH') {
+        window.location.href = '/user';
+      }
+    });
 });
