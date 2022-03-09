@@ -1,3 +1,4 @@
+
 #logo {
     color: #FFC300;
     font-weight: 600;
@@ -114,14 +115,16 @@
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
+    background-color: #fff;
 }
 .card{
-    width: 50vw;
+    width: 40vw;
     border: 1px solid #d8d8d8;
     margin-bottom: 30px;
 }
 .img {
-    width: 50vw;
+    width: 40vw;
+    height: 300px;
   }
   .headerCard{
     padding: 0 20px;
@@ -140,4 +143,8 @@
     height: 30px;
     border-radius: 50%;
     margin-right: 10px;
+  }
+
+  .caption{
+      padding:5px;
   }
