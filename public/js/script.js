@@ -9,10 +9,8 @@ const closeIcon = document.querySelector('#close');
 const addBtn = document.querySelector('#btn');
 const login = document.querySelector('#login');
 const reciepes = document.querySelector('#addReciepe');
-const name = document.querySelector('#name');
+
 const userInfo = getUserInfoFromCookie();
-console.log(getUserInfoFromCookie());
-name.textContent = userInfo.username;
 
 fetch('/user/getRecipes')
   .then((res) => res.json())
@@ -39,17 +37,9 @@ login?.addEventListener('submit', (e) => {
 reciepes?.addEventListener('submit', (e) => {
   e.preventDefault();
   const { title, detail } = e.target;
-  cards.textContent = '';
 
-  postData({ title: title.value.trim(), detail: detail.value.trim(), userId: userInfo.id }, '/user/addReciepes');
-
-  fetch('/user/getRecipes')
-    .then((res) => res.json())
-    .then((data) => {
-      data.forEach((object) => {
-        renderDom(object);
-      });
-    })
+  postData({ title: title.value.trim(), detail: detail.value.trim(), userId: userInfo.id }, '/user/addReciepes')
+    .then((data) => renderDom(data[0]))
     .catch((err) => console.log(err));
 });
 
