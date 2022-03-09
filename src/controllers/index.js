@@ -3,7 +3,8 @@ const { logIn } = require('./login');
 const { loginHandle } = require('./loginHandle');
 const { handleSignUp } = require('./handleSignUp');
 const { addRecipes } = require('./addReciepes');
+const { getRecipes } = require('./getRecipes');
 
 module.exports = {
-  signUp, logIn, loginHandle, handleSignUp, addRecipes,
+  signUp, logIn, loginHandle, handleSignUp, addRecipes,getRecipes
 };

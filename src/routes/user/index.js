@@ -1,7 +1,7 @@
 const userRouter = require('express').Router();
 const { join } = require('path');
 const { jwtVerifyPromise } = require('../../utils');
-const { addRecipes } = require('../../controllers');
+const { addRecipes,getRecipes } = require('../../controllers');
 
 userRouter.use((req, res, next) => {
   const token = req.cookies.info;
@@ -12,7 +12,7 @@ userRouter.use((req, res, next) => {
 
       next();
     })
-    .catch(() => console.log('err'));
+    .catch(() => res.json('err'));
 });
 
 userRouter.get('/', (req, res) => {
@@ -21,5 +21,7 @@ userRouter.get('/', (req, res) => {
 });
 
 userRouter.post('/addReciepes', addRecipes);
+
+userRouter.get('/getRecipes', getRecipes);
 
 module.exports = { userRouter };
