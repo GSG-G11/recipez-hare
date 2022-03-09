@@ -18,5 +18,5 @@ login?.addEventListener('submit', (e) => {
 reciepes.addEventListener('submit', (e) => {
   e.preventDefault();
   const { title, detail, userId } = e.target;
-  postData({ title: title.value.trim(), detail: detail.value.trim(), userId: userId.value.trim() }, '/user/addReciepes');
+  postData({ title: title.value.trim(), detail: detail.value.trim(), userId: Number(userId.value.trim()) }, '/user/addReciepes');
 });
