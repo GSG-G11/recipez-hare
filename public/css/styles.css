@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.section{
+
+    background-image: url('../hero-bg.jpg');
+    width: 99vw;
+    height: 100vh;
+    background-size: cover;
+    
+  
+   
+}
+
+#signUpSection{
+  
+    width: 350px;
+    height: 300px;
+    padding-left: 25px;
+    padding-top: 180px;
+    margin-left: 60px;
+ 
+   
+
+}
+
+
+.signUp{
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(139, 137, 134,0.6);
+    padding-left: 30px;
+    padding-bottom: 30px;
+
+  
+
+  
+}
+#signUpSection h1{
+    margin-bottom: 10px;
+    margin-left: 100px;
+    opacity: 1;
+    color:#FFC300;}
+#username{
+    width: 280px;
+    height: 35px;
+    margin-bottom: 20px;
+    opacity:1;
+
+}
+#repeatPassword{
+    width: 280px;  
+    height: 35px;
+    margin-bottom: 20px;
+    opacity: 1;
+}
+#password{
+    width: 280px; 
+    height: 35px;
+    margin-bottom: 20px;
+    opacity: 1;
+    
+}
+#btn{
+    width: 280px;  
+    height: 35px;
+    border: none;
+    background-color: #FFC300;
+    color: white;
+    opacity: 1;
+}
