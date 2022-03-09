@@ -15,6 +15,9 @@
   
    
 }
+.sectionLogIn{
+    padding-top: 100px;
+}
 
 #signUpSection{
   
@@ -72,4 +75,5 @@
     background-color: #FFC300;
     color: white;
     opacity: 1;
+    
 }

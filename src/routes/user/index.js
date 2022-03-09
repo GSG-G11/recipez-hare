@@ -16,7 +16,6 @@ userRouter.use((req, res, next) => {
 });
 
 userRouter.get('/', (req, res) => {
-  console.log(req.userInfo);
   res.sendFile(join(__dirname, '..', '..', '..', 'public', 'htmlPage', 'reciepes.html'));
 });
 
