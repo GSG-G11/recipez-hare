@@ -4,22 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reciepes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>recipezShare</title>
 </head>
 <body>
-    
+    <header>
+
+        <a id="logo">recipy</a>
+      
+
+
+        <nav>
+            <ul class="links">
+                <li><i class="fa fa-user" style="font-size:24px"></i></li>
+                <li><i class="fa fa-home" style="font-size:24px"></i></li>
+                <li id="plus"><i class="fa fa-plus" style="font-size:24px"></i></li>
+            </ul>
+        </nav>
+        <div class="logOutSection">
+            <p id="name">farah</p>
+            <button id="logOut"> Log out</button>
+          
+
+            
+        </div>
+    </header>
+    <section class="createRecipy">
+    <div>
+        <div class="createRecipyHeader">
+        <p id="formTitle"> Add Recipy</p>
+        <p id="close"><i class="fa fa-close"></i></p>
+        </div>
    <form id="addReciepe">
-       <label name="title">title</label>
+       <div  class="createRecipyContainer">
+       <label name="title">Title</label>
        <input id="title" name="title">
 
-       <label name="detail">details</label>
-       <input id="detail" name="detail">
+       <label name="detail">Details</label>
+       <textarea id="detail" name="detail" rows="8" cols="40"></textarea>
+    
 
-       <label name="userId">userId</label>
-       <input  type="number" id="userId" name="userId">
-
-       <button>add</button>
+       <button id="btn">Add</button>
+    </div>
    </form>
-<script type="module" src="./js/script.js"></script>
+</div>
+</section>
+<dev class="cards">
+    <div class="card">
+  
+    
+</dev>
+<script src ="../js/reciepes.js"> </script>
+<script type="module" src="../js/script.js"></script>
+
 </body>
 </html>

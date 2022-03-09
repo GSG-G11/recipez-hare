@@ -1,0 +1,150 @@
+
+#logo {
+    color: #FFC300;
+    font-weight: 600;
+    font-size: larger;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .links {
+    list-style: none;
+  }
+  
+  .links li {
+    display: inline-block;
+    padding: 0 20px;
+  color: #FFC300;
+    cursor: pointer;
+  }
+  
+  .icons {
+    list-style: none;
+    padding: 0 10px;
+  }
+  
+  .icons li {
+    display: inline-block;
+    padding: 1 10px;
+  }
+  
+  .icons li a {
+    text-decoration: none;
+  }
+.createRecipy{
+    display:none;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 25%;
+    top: 20%;
+    width: 37%;
+    border: 1px solid #d8d8d8;
+}
+.createRecipyHeader {
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+  }
+.createRecipyContainer{
+    padding: 20px 40px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.logOutSection{
+    display: flex;
+}
+  
+#logOut{
+    margin-top:10px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFC300;
+}
+#name{
+    margin-right: 10px;
+}
+#addReciepe{
+    display: flex;
+    flex-direction: column;
+}
+#username{
+    width: 280px;
+    height: 35px;
+    margin-bottom: 20px;
+    opacity:1;
+
+}
+#title{
+    width: 380px;  
+    height: 30px;
+    margin-bottom: 20px;
+    opacity: 1;
+}
+#detail{
+    width: 380px; 
+   
+    margin-bottom: 20px;
+    opacity: 1;
+    
+}
+#btn{
+    width: 380px;  
+    height: 35px;
+    border: none;
+    background-color: #FFC300;
+    color: white;
+    opacity: 1;
+    
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+.card{
+    width: 40vw;
+    border: 1px solid #d8d8d8;
+    margin-bottom: 30px;
+}
+.img {
+    width: 40vw;
+    height: 300px;
+  }
+  .headerCard{
+    padding: 0 20px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .publicherInfo {
+    display: flex;
+  }
+  .publicherInfo img {
+    padding-top: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .caption{
+      padding:5px;
+  }
