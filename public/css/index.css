@@ -1,7 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sectionLogIn{
+    padding-top: 200px;
+    padding-left: 20px;
+    margin-left: 50px;
+}
+#content{
+    background-color:rgba(139, 137, 134,0.6);
+    width: 300px;
+    height:250px;   
+    padding-left: 10px;
+}
 .container{
     background-image: url('../hero-bg.jpg');
     width: 99vw;
     height: 100vh;
     background-size: cover;
     color: #fff;
+}
+#login{
+    display: flex;
+    flex-direction: column;
+   
+}
+.sectionLogIn{
+   
+    width: 300px;
+    height: 300px;
+}
+#content h1{
+    margin-bottom: 10px;
+    color: #FFC300;
+}
+#content a{
+    color: #FFC300;  
+}
+
+#username{
+    width: 280px;
+    height: 35px;
+    margin-bottom: 20px;
+    opacity:1;
+
+}
+#repeatPassword{
+    width: 280px;  
+    height: 35px;
+    margin-bottom: 20px;
+    opacity: 1;
+}
+#password{
+    width: 280px; 
+    height: 35px;
+    margin-bottom: 20px;
+    opacity: 1;
+    
+}
+#btn{
+    width: 280px;  
+    height: 35px;
+    border: none;
+    background-color: #FFC300;
+    color: white;
+    opacity: 1;
+    margin-bottom: 15px;
 }
