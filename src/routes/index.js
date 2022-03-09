@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const {
-  signUp, logIn, loginHandle, handleSignUp, addRecipes, pageNotFound, serverError,
+  signUp, logIn, loginHandle, handleSignUp, pageNotFound, serverError,
 } = require('../controllers');
 const { userRouter } = require('./user');
 
