@@ -4,6 +4,7 @@ const { hashPassword } = require('../utils');
 
 const signUp = (req, res) => {
   const { username, password } = req.body;
+
   signUpValidation(req.body)
     .then(() => hasUsernameTakenQuery({ username }))
     .then(() => hashPassword(password))
