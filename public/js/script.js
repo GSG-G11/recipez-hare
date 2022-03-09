@@ -11,7 +11,7 @@ const login = document.querySelector('#login');
 const reciepes = document.querySelector('#addReciepe');
 const name = document.querySelector('#name');
 const userInfo = getUserInfoFromCookie();
-
+console.log(getUserInfoFromCookie());
 name.textContent = userInfo.username;
 
 fetch('/user/getRecipes')
