@@ -6,7 +6,8 @@
 ## links
 [heroku link](https://recipezshare.herokuapp.com/)
 ## schema
-![alt text](./public/img/recipes-schema%20.png)
+![alt text](https://cdn.discordapp.com/attachments/950681061438926878/950706838981201970/recipes.png
+)
 
 ## User Stories 
 
