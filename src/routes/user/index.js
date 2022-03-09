@@ -18,4 +18,6 @@ userRouter.get('/', (req, res) => {
   // res.send('user');
 });
 
+userRouter.post('/reciepes', addRecipes);
+
 module.exports = { userRouter };
