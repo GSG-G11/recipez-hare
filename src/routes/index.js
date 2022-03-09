@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const {
-  signUp, logIn, loginHandle, handleSignUp,
+  signUp, logIn, loginHandle, handleSignUp, addRecipes,
 } = require('../controllers');
 const { userRouter } = require('./user');
 
