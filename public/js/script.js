@@ -2,15 +2,16 @@
 import postData from './postData.js';
 import getUserInfoFromCookie from './getUserInfoFromCookie.js';
 
-const cards = document.querySelector('.cards');
 const plusIcon = document.querySelector('#plus');
 const recipySection = document.querySelector('.createRecipy');
 const closeIcon = document.querySelector('#close');
 const addBtn = document.querySelector('#btn');
-const login = document.querySelector('#login');
+const name = document.querySelector('#name');
+const logOut = document.querySelector('#logOut');
 const reciepes = document.querySelector('#addReciepe');
 
 const userInfo = getUserInfoFromCookie();
+name.textContent = userInfo.username;
 
 fetch('/user/getRecipes')
   .then((res) => res.json())
@@ -21,18 +22,9 @@ fetch('/user/getRecipes')
   })
   .catch((err) => console.log(err));
 
-login?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const { username, password } = e.target;
-  postData(
-    { username: username.value.trim(), password: password.value.trim() },
-    '/log-in',
-  ).then((res) => {
-    if (res === 'AUTH') {
-      window.location.href = '/user';
-    }
-  });
-});
+/// /log out in front
+/* document.cookie = 'info=;';
+  window.location.href = '/'; */
 
 reciepes?.addEventListener('submit', (e) => {
   e.preventDefault();
