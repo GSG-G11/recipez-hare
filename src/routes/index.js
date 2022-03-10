@@ -4,6 +4,7 @@ const {
 } = require('../controllers');
 const { userRouter } = require('./user');
 
+router.get('/', loginHandle);
 router.get('/sign-up', handleSignUp);
 router.get('/log-in', loginHandle);
 router.post('/sign-up', signUp);
