@@ -1,26 +1,16 @@
 const userRouter = require('express').Router();
-const { join } = require('path');
-const { jwtVerifyPromise } = require('../../utils');
-const { addRecipes,getRecipes } = require('../../controllers');
 
-userRouter.use((req, res, next) => {
-  const token = req.cookies.info;
-  jwtVerifyPromise(token)
-    .then((decoded) => {
-      console.log(decoded);
-      req.userInfo = decoded;
+const {
+  addRecipes, getRecipes, logOut, checkCookies, handleUserPage,
+} = require('../../controllers');
 
-      next();
-    })
-    .catch(() => res.json('err'));
-});
+userRouter.use(checkCookies);
 
-userRouter.get('/', (req, res) => {
-  res.sendFile(join(__dirname, '..', '..', '..', 'public', 'htmlPage', 'reciepes.html'));
-});
+userRouter.get('/', handleUserPage);
 
 userRouter.post('/addReciepes', addRecipes);
 
 userRouter.get('/getRecipes', getRecipes);
+userRouter.get('/log-out', logOut);
 
 module.exports = { userRouter };
