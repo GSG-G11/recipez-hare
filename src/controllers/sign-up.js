@@ -1,4 +1,3 @@
-const { reset } = require('nodemon');
 const { addNewUserQuery, hasUsernameTakenQuery } = require('../database/queries');
 const { signUpValidation } = require('../validation');
 const { hashPassword } = require('../utils');
